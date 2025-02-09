@@ -1,3 +1,5 @@
+// Define your models here.
+
 export interface Model {
   id: string;
   label: string;
@@ -7,11 +9,17 @@ export interface Model {
 
 export const models: Array<Model> = [
   {
-    id: 'claude-3-sonnet',
-    label: 'Claude 3.5 Sonnet',
-    apiIdentifier: 'claude-3-sonnet-20240229',
-    description: 'Best for most tasks: fast, capable, and cost-effective',
+    id: 'gpt-4o',
+    label: 'GPT 4o',
+    apiIdentifier: 'gpt-4o',
+    description: 'For complex, multi-step tasks',
   },
+  {
+    id: 'gpt-4o-mini',
+    label: 'GPT 4o Mini',
+    apiIdentifier: 'gpt-4o-mini',
+    description: 'Affordable for complex, multi-step tasks',
+  }
 ] as const;
 
-export const DEFAULT_MODEL_NAME: string = 'claude-3-sonnet';
+export const DEFAULT_MODEL_NAME: string = 'gpt-4o';
